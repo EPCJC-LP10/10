@@ -11,7 +11,7 @@ def menu():
     print
     print "1: Inserir novo contacto"
     print "2: Listar todos os contactos"
-    print "3: Pesquisar contacto por código"
+    print "3: Pesquisar contacto por nome"
     print "4: Alterar dados de um contacto"
     print "5: Eliminar contacto"
     
@@ -82,13 +82,10 @@ def listar_todos_alternativa():
 
 
 def pesquisar():
-    nome = raw_input("Introduza código do contacto: ")
-    posicao = posicao_contacto(nome)
-    if posicao == -1:
-        print "Esse nome não existe."
-        return
-
-    apresentar_registo(Contactos[posicao])
+    nome = raw_input("Introduza nome do contacto: ")
+    for pos in range(len(Contactos)):
+        if Contactos[pos].nome == nome:
+            apresentar_registo(Contactos[pos])
     
 def alterar():
     codigo = input("Introduza código do contacto: ")
