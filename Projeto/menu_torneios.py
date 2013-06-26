@@ -20,7 +20,7 @@ def principal():
     return op
 
 
-def equipa():
+def torneio():
     print
     print " *** Menu Torneios **** "
     print
