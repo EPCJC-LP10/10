@@ -15,13 +15,12 @@ def ler_ficheiros():
     # adicionar todos ficheiros a ler
     jogadores.listaJogadores = util.ler_ficheiro(fxjogadores)
     equipas.listaEquipas = util.ler_ficheiro(fxequipas)
-
+    
 
 def escrever_ficheiros():
 	# adicionar todos ficheiros a guardar
      util.escrever_ficheiro(fxjogadores, jogadores.listaJogadores)
      util.escrever_ficheiro(fxequipas, equipas.listaEquipas)
-
 
 
 # Bloco Principal
@@ -33,7 +32,7 @@ while not terminar:
     op = menu.principal()
     
     if op == '1':
-        jogador.gerir()
+        jogadores.gerir()
     elif op == '2':
         pass    #por fazer
     elif op == '0':
